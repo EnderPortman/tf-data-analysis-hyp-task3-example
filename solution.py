@@ -7,4 +7,4 @@ chat_id = 192196854  # Ваш chat ID, не меняйте название пе
 
 def solution(x: np.array, y: np.array) -> bool: # историч, новое
     
-    return stats.ks_2samp(y, x, alternative='less').pvalue < 0.1
+    return stats.mannwhitneyu(x, y, alternative="less").pvalue <= 0.1
